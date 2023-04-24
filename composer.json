@@ -1,0 +1,10 @@
+{
+    "name": "oranfry/transactions",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "transactions\\": "classes"
+        }
+    }
+}

@@ -10,12 +10,12 @@ abstract class transfer extends \jars\Linetype
 
         $this->simple_strings('date');
 
-        $this->fields['from'] = fn ($records) => $records['/']->fromjar;
-        $this->fields['to'] = fn ($records) => $records['/']->tojar;
+        $this->fields['from'] = fn ($records): string => $records['/']->fromjar;
+        $this->fields['to'] = fn ($records): string => $records['/']->tojar;
         $this->simple_float('amount', 2);
-        $this->fields['account'] = fn ($records) : string => 'jartransfer';
+        $this->fields['account'] = fn ($records): string => 'jartransfer';
 
-        $this->unfuse_fields['fromjar'] = fn ($line) => $line->from;
-        $this->unfuse_fields['tojar'] = fn ($line) => $line->to;
+        $this->unfuse_fields['fromjar'] = fn ($line): string => $line->from;
+        $this->unfuse_fields['tojar'] = fn ($line): string => $line->to;
     }
 }

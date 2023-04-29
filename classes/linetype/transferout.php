@@ -13,13 +13,13 @@ class transferout extends transfer
 
         unset($this->fields['from']);
 
-        $this->fields['jar'] = fn ($records) => $records['/']->fromjar;
-        $this->unfuse_fields['fromjar'] = fn ($line) => $line->jar;
+        $this->fields['jar'] = fn ($records): string => $records['/']->fromjar;
+        $this->unfuse_fields['fromjar'] = fn ($line): string => $line->jar;
 
-        $this->fields['amount'] = fn ($records) : string => bcsub('0', $records['/']->amount ?? '0', 2);
-        $this->unfuse_fields['amount'] = fn ($line) : string => bcsub('0', $line->amount ?? '0', 2);
+        $this->fields['amount'] = fn ($records): float => (float) bcsub('0', $records['/']->amount ?? '0', 2);
+        $this->unfuse_fields['amount'] = fn ($line): string => bcsub('0', (string) ($line->amount ?? 0), 2);
 
-        $this->fields['description'] = fn ($records) : string => 'To ' . $records['/']->tojar;
+        $this->fields['description'] = fn ($records): string => 'To ' . $records['/']->tojar;
     }
 
     public function validate($line)

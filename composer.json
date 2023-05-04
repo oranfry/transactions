@@ -2,6 +2,9 @@
     "name": "oranfry/transactions",
     "version": "1.0.0",
     "minimum-stability": "dev",
+    "require": {
+        "oranfry/simple-fields": "*"
+    },
     "autoload": {
         "psr-4": {
             "transactions\\": "classes"

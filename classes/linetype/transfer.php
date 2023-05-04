@@ -2,13 +2,17 @@
 
 namespace transactions\linetype;
 
+use simplefields\traits\SimpleFields;
+
 abstract class transfer extends \jars\Linetype
 {
+    use SimpleFields;
+
     public function __construct()
     {
         $this->table = 'transfer';
 
-        $this->simple_strings('date');
+        $this->simple_date('date');
 
         $this->fields['from'] = fn ($records): string => $records['/']->fromjar;
         $this->fields['to'] = fn ($records): string => $records['/']->tojar;

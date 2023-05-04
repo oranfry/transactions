@@ -2,18 +2,22 @@
 
 namespace transactions\linetype;
 
+use simplefields\traits\SimpleFields;
+
 class transaction extends \jars\Linetype
 {
+    use SimpleFields;
+
     public function __construct()
     {
         $this->table = 'transaction';
 
-        $this->simple_string('date');
+        $this->simple_date('date');
         $this->simple_string('description');
         $this->simple_float('amount', 2);
     }
 
-    public function validate($line)
+    public function validate($line): array
     {
         $errors = parent::validate($line);
 

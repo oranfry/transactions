@@ -9,7 +9,6 @@ class transferout extends transfer
         parent::__construct();
 
         $this->table = 'transfer';
-        $this->fields['superjar'] = fn ($records) => $records['/']->fromjar == 'vault' ? 'longterm' : 'daily';
 
         unset($this->fields['from']);
 
@@ -22,7 +21,7 @@ class transferout extends transfer
         $this->fields['description'] = fn ($records): string => 'To ' . $records['/']->tojar;
     }
 
-    public function validate($line)
+    public function validate($line): array
     {
         $errors = parent::validate($line);
 

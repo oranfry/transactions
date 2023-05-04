@@ -8,10 +8,10 @@ class jartransaction extends transaction
     {
         parent::__construct();
 
-        $this->simple_strings('jar');
+        $this->simple_string('jar');
     }
 
-    function validate($line)
+    function validate($line): array
     {
         $errors = parent::validate($line);
 

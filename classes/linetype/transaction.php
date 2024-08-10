@@ -13,6 +13,7 @@ class transaction extends \jars\Linetype
         $this->table = 'transaction';
 
         $this->simple_date('date');
+        $this->simple_string('account');
         $this->simple_string('description');
         $this->simple_float('amount', 2);
     }

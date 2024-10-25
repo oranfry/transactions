@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "transactions\\": "classes"
+            "Transactions\\Linetype\\": ""
         }
     },
     "name": "oranfry/transactions",

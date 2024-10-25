@@ -1,10 +1,10 @@
 <?php
 
-namespace transactions\linetype;
+namespace Transactions\Linetype;
 
 use simplefields\traits\SimpleFields;
 
-class transaction extends \jars\Linetype
+class Transaction extends \jars\Linetype
 {
     use SimpleFields;
 

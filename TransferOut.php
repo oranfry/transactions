@@ -1,8 +1,8 @@
 <?php
 
-namespace transactions\linetype;
+namespace Transactions\Linetype;
 
-class transferout extends transfer
+class TransferOut extends Transfer
 {
     public function __construct()
     {

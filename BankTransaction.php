@@ -21,5 +21,6 @@ class BankTransaction extends \jars\Linetype
         $this->simple_string('reference');
         $this->simple_string('particulars');
         $this->simple_string('analysis_code');
+        $this->simple_string('extra');
     }
 }

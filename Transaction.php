@@ -10,6 +10,8 @@ class Transaction extends \jars\Linetype
 
     public function __construct()
     {
+        parent::__construct();
+
         $this->table = 'transaction';
 
         $this->simple_date('date');

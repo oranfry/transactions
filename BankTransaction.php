@@ -1,10 +1,10 @@
 <?php
 
-namespace Transactions\Linetype;
+namespace OranFry\Transactions\Linetype;
 
-use simplefields\traits\SimpleFields;
+use \OranFry\SimpleFields\Traits\SimpleFields;
 
-class BankTransaction extends \jars\Linetype
+class BankTransaction extends \OranFry\Jars\Core\Linetype
 {
     use SimpleFields;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace OranFry\Transactions\Linetype;
+namespace OranFry\Transactions\Linetypes;
 
 use OranFry\SimpleFields\Traits\SimpleFields;
 
